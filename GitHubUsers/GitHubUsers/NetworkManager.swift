@@ -22,10 +22,7 @@ final class NetworkManager<T: Codable> {
             }
         }
         
-        var request = URLRequest(url: url)
-        request.setValue("GitUsersApp", forHTTPHeaderField: "User-Agent")
-        
-        task = URLSession.shared.dataTask(with: request, completionHandler: { maybeData, maybeResponse, maybeError in
+        task = URLSession.shared.dataTask(with: url, completionHandler: { maybeData, maybeResponse, maybeError in
             
             var data = Data()
             
