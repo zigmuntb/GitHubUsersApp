@@ -12,8 +12,6 @@ final class NetworkManager<T: Codable> {
     
     private var task: URLSessionDataTask?
     
-    
-    
     func requestData(with url: URL, fail: @escaping (String) -> (), success: @escaping (T) -> ()) {
         
         func responceError(description: String) {
